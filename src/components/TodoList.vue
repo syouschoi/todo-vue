@@ -10,7 +10,9 @@
             ></v-checkbox>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>{{ todo.txt }}</v-list-item-title>
+            <v-list-item-title :class="{ completed: todo.completed }">{{
+              todo.txt
+            }}</v-list-item-title>
           </v-list-item-content>
           <v-list-item-action>
             <v-btn icon @click="deleteTodo(index)">
@@ -39,4 +41,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.completed {
+  text-decoration-line: line-through;
+}
+</style>

@@ -2,7 +2,10 @@
   <v-app>
     <v-main>
       <v-container>
-        <TodoInput />
+        <TodoInput>
+          <strong slot="header">ㅋㅋㅋㅋㅋㅋㅋㅋㅋ</strong>
+          <span>테스트</span>
+        </TodoInput>
         <TodoList />
       </v-container>
     </v-main>

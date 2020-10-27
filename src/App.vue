@@ -6,7 +6,7 @@
           <strong slot="header">ㅋㅋㅋㅋㅋㅋㅋㅋㅋ</strong>
           <span>테스트</span>
         </TodoInput>
-        <TodoList />
+        <TodoList :testProp="test" />
       </v-container>
     </v-main>
   </v-app>
@@ -17,12 +17,12 @@ const TodoInput = () => import('@/components/TodoInput');
 const TodoList = () => import('@/components/TodoList');
 export default {
   name: 'App',
-
+  data: () => ({
+    test: 'tttest'
+  }),
   components: {
     TodoInput,
     TodoList
-  },
-
-  data: () => ({})
+  }
 };
 </script>

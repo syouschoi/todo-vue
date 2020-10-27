@@ -29,7 +29,9 @@ import { mapActions } from 'vuex';
 export default {
   name: 'TodoList',
   data: () => ({}),
-  props: ['testProp'],
+  props: {
+    testProp: String
+  },
   created() {
     console.log(this.testProp);
   },

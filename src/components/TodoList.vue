@@ -29,6 +29,10 @@ import { mapActions } from 'vuex';
 export default {
   name: 'TodoList',
   data: () => ({}),
+  props: ['testProp'],
+  created() {
+    console.log(this.testProp);
+  },
   methods: {
     ...mapActions(['chgTodo', 'delTodo']),
     changeCompleted(idx) {
